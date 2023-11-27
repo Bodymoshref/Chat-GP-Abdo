@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif , 'Segoe UI', Tahoma, Verdana;
+}
+
+body {
+    background-color: #1d2023;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title_of_page {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.title_of_page span {
+    font-family: "Cairo";
+}
+
+.prompt {
+    background-color: #292c31;
+    padding: 5px;
+    width: 620px;
+    border: 3px solid #36383d;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+input,
+button {
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+input {
+    background-color: #292c31;
+    width: 75%;
+    outline: none;
+}
+
+button {
+    background-color: #36383d;
+    width: 20%;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+button:hover {
+    background-color: #45464a;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
+}
+
+.images div {
+    width: 250px;
+    height: 200px;
+    background-color: #292c31;
+    border: 3px solid #36383d;
+    border-radius: 10px;
+}
+
+.images div img {
+    width: 100%;
+}
+
+.footer_of_page {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top , #ffffff8a , #cfcfcf);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0px;
+    transition: 1s ease;
+}
+
+.footer_of_page::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top , transparent , #1d2023);
+}
+
+.footer_of_page .h2_footer {
+    color: black;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer_of_page img {
+    width: 140px;
+    margin-top: 20px;
+    transition: .5s ease-out;
+}
+
+.footer_of_page p {
+    margin-right: 25px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+/* Responseve */
+@media screen and (max-width: 775px) {
+    .footer_of_page {
+        visibility: hidden;
+    }
+
+    .images div {
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .images div:last-of-type {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .images {grid-template-columns: 1fr;}
+
+    .images div {
+        height: 175px;
+        width: 300px;
+    }
+
+    .images div:last-of-type {margin-bottom: 0;}
+
+    body {height: 125vh;}
+
+    .prompt {
+        width: 500px;
+        margin-bottom: 25px;
+    }
+
+    button {width: 25%;}
+
+    input {width: 70%;}
+
+    .title_of_page {
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .prompt {
+        width: 450px;
+        margin-bottom: 25px;
+    }
+}
